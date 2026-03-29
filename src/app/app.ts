@@ -1,12 +1,38 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+import { TaskList } from './components/task-list/task-list';
+
+interface Task {
+  title: string;
+  completed: boolean;
+}
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [FormsModule, TaskList],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('todo-list-angular');
+  tasks: Task[] = [];
+  newTask: string = '';
+
+  addTask() {
+    if (!this.newTask.trim()) return;
+
+    this.tasks.push({
+      title: this.newTask,
+      completed: false
+    });
+
+    this.newTask = '';
+  }
+
+  toggleTask(task: Task) {
+    task.completed = !task.completed;
+  }
+
+  removeTask(index: number) {
+    this.tasks.splice(index, 1);
+  }
 }

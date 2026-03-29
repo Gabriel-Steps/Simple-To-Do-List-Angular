@@ -1,0 +1,11 @@
+<li>
+  <span 
+    (click)="toggle.emit()"
+    [style.text-decoration]="task.completed ? 'line-through' : 'none'"
+  >
+    {{ task.title }}
+  </span>
+
+  <button (click)="remove.emit()">Remover</button>
+
+</li>

@@ -1,0 +1,15 @@
+<div class="div-container-card-list-task">
+  <h2>Lista de Tarefas</h2>
+
+    <input [(ngModel)]="newTask" placeholder="Digite uma tarefa" />
+    <button (click)="addTask()">Enviar</button>
+
+    <ul>
+      <app-task-item
+        *ngFor="let task of tasks; let i = index"
+        [task]="task"
+        (toggle)="toggleTask(i)"
+        (remove)="removeTask(i)"
+    ></app-task-item>
+  </ul>
+</div>

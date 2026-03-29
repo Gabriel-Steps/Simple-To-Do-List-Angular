@@ -1,0 +1,44 @@
+.div-container-card-list-task{
+    width: 95vw;
+    padding: 30px;
+    background-color: #FFFFFF;
+    box-shadow: 1px 1px 5px #00000036;
+    border-radius: 5px;
+    height: 70vh;
+    overflow-y: scroll;
+    
+    h2{
+        font-size: 30px;
+        color: #161616;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    input{
+        padding: 8px;
+        width: 30%;
+        border: 1px solid #0000001c;
+        font-size: 15px;
+        margin-top: 15px;
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+
+    button{
+        margin-left: 15px;
+        padding: 10px;
+        font-size: 16px;
+        background-color: transparent;
+        border: 1px solid #0000003d;
+        border-radius: 5px;
+        font-weight: 400;
+        transition: 0.5s;
+    }
+
+    button:hover{
+        border: none;
+        cursor: pointer;
+        background-color: #71ff71;
+        box-shadow: 1px 1px 5px #71ff7152;
+        color: #FFFFFF;
+        transition: 0.5s;
+    }
+}
